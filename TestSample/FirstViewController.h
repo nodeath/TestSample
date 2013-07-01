@@ -11,6 +11,8 @@
 @interface FirstViewController : UIViewController
 @property (retain, nonatomic) IBOutlet UITextField *usernameField;
 @property (retain, nonatomic) IBOutlet UITextField *passwordField;
-- (IBAction)didEndOnExit:(id)sender;
+
 - (IBAction)didPressValid:(UIButton *)sender;
+- (IBAction)didEndOnExit:(UITextField *)sender;
+- (IBAction)displayGestureForTapRecognizer:(UITapGestureRecognizer *)sender;
 @end

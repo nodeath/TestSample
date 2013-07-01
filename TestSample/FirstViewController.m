@@ -49,7 +49,16 @@
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Waring" message:@"Password is too short" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertview show];
         [alertview release];
+    }else{
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Validation passed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertview show];
+        [alertview release];
     }
+}
+
+- (IBAction)displayGestureForTapRecognizer:(UITapGestureRecognizer *)sender {
+    [self.usernameField resignFirstResponder];
+    [self.passwordField resignFirstResponder];
 }
 
 - (void)dealloc {
