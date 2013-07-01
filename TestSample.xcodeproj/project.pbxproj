@@ -17,7 +17,6 @@
 		4C20165217817C8100CBF606 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C20163817817C8100CBF606 /* first@2x.png */; };
 		4C20165317817C8100CBF606 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C20163A17817C8100CBF606 /* FirstViewController.m */; };
 		4C20165417817C8100CBF606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C20163B17817C8100CBF606 /* main.m */; };
-		4C20165517817C8100CBF606 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4C20163C17817C8100CBF606 /* README.md */; };
 		4C20165617817C8100CBF606 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C20163D17817C8100CBF606 /* second.png */; };
 		4C20165717817C8100CBF606 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C20163E17817C8100CBF606 /* second@2x.png */; };
 		4C20165817817C8100CBF606 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C20164017817C8100CBF606 /* SecondViewController.m */; };
@@ -44,7 +43,6 @@
 		4C20163917817C8100CBF606 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		4C20163A17817C8100CBF606 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		4C20163B17817C8100CBF606 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C20163C17817C8100CBF606 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4C20163D17817C8100CBF606 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		4C20163E17817C8100CBF606 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		4C20163F17817C8100CBF606 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				4C20163917817C8100CBF606 /* FirstViewController.h */,
 				4C20163A17817C8100CBF606 /* FirstViewController.m */,
 				4C20163B17817C8100CBF606 /* main.m */,
-				4C20163C17817C8100CBF606 /* README.md */,
 				4C20163D17817C8100CBF606 /* second.png */,
 				4C20163E17817C8100CBF606 /* second@2x.png */,
 				4C20163F17817C8100CBF606 /* SecondViewController.h */,
@@ -195,7 +192,6 @@
 				4C20165017817C8100CBF606 /* SecondViewController.xib in Resources */,
 				4C20165117817C8100CBF606 /* first.png in Resources */,
 				4C20165217817C8100CBF606 /* first@2x.png in Resources */,
-				4C20165517817C8100CBF606 /* README.md in Resources */,
 				4C20165617817C8100CBF606 /* second.png in Resources */,
 				4C20165717817C8100CBF606 /* second@2x.png in Resources */,
 				4C20165B17817C8100CBF606 /* ThirdViewController.xib in Resources */,
