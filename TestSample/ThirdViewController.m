@@ -61,6 +61,10 @@
             imagePickerController.delegate = self;
             [self presentViewController:imagePickerController animated:YES completion:nil];
             [imagePickerController release];
+        }else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image Picker is not supported under this environment" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            [alertView release];
         }
     }else if(buttonIndex == 1){
         //When the user choose to pick a picture from the picture library, call the interface to show camera.
@@ -74,7 +78,12 @@
             imagePickerController.delegate = self;
             [self presentViewController:imagePickerController animated:YES completion:nil];
             [imagePickerController release];
+        }else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Camera is not supported under this environment" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            [alertView release];
         }
+
     }
 }
 
