@@ -1,5 +1,7 @@
 TestSample
 ==========
+Developer: Shawn Hung
+Designer: John Loh
 
 A sample project to demonstrate my basic skills to development of iOS apps
 
@@ -19,3 +21,4 @@ there are three sub ViewController,
        the Camera interface, will show. After choosing a image, the program will 
        return to the first view and the background image will become the one which is chosen by the user. 
        
+July 5, 2013: Thanks for designing support of John Loh
