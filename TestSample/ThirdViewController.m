@@ -9,6 +9,8 @@
 //
 
 #import "ThirdViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface ThirdViewController ()
 
@@ -43,7 +45,8 @@
     //When the button is pressed, it shows a function list for user to choose.
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Choose a function" delegate:self cancelButtonTitle:@"cancel" destructiveButtonTitle:nil otherButtonTitles:
                                   @"Select from Photo Library",
-                                  @"Take a photo",nil];
+                                  @"Take a photo",
+                                  @"Record a video", nil];
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
     [actionSheet release];
 
@@ -84,14 +87,43 @@
             [alertView release];
         }
 
+    }else{
+        //When the user choose to pick a picture from the picture library, call the interface to show camera.
+        if ([UIImagePickerController isSourceTypeAvailable:
+             UIImagePickerControllerSourceTypeCamera]){
+            UIImagePickerController * imagePickerController = [[UIImagePickerController alloc] init];
+            imagePickerController.delegate = self;
+            imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            imagePickerController.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *)kUTTypeMovie, nil];
+            imagePickerController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+            imagePickerController.allowsEditing = YES;
+            imagePickerController.delegate = self;
+            [self presentViewController:imagePickerController animated:YES completion:nil];
+            [imagePickerController release];
+        }else{
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Video is not supported under this environment" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            [alertView release];
+        }
     }
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker
-        didFinishPickingImage:(UIImage *)image
-                  editingInfo:(NSDictionary *)editingInfo{
-    self.imageView.image = image;
-    [picker dismissViewControllerAnimated:YES completion:nil];
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    if([info[UIImagePickerControllerMediaType] isEqualToString:(NSString *)kUTTypeImage]){
+        self.imageView.image = info[UIImagePickerControllerOriginalImage];
+        [picker dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        NSURL *mediaURL = info[UIImagePickerControllerMediaURL];
+        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum ([mediaURL path])) {
+            UISaveVideoAtPathToSavedPhotosAlbum ([mediaURL path], nil, nil, nil);
+        }
+        
+        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:(NSURL *) info[UIImagePickerControllerMediaURL]];
+        [picker dismissViewControllerAnimated:YES completion:^{
+            [self presentMoviePlayerViewControllerAnimated:player];
+            [player release];
+        }];
+    }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
