@@ -44,10 +44,6 @@
 		4C6F32231786F35A004D4A99 /* login_page_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F320F1786F35A004D4A99 /* login_page_bg@2x.png */; };
 		4C6F32241786F35A004D4A99 /* splash_page.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F32101786F35A004D4A99 /* splash_page.png */; };
 		4C6F32251786F35A004D4A99 /* splash_page@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F32111786F35A004D4A99 /* splash_page@2x.png */; };
-		4C6F32271786F3DB004D4A99 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F32261786F3DB004D4A99 /* Default.png */; };
-		4C6F32291786F3E5004D4A99 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F32281786F3E5004D4A99 /* Default@2x.png */; };
-		4C6F322B1786F40C004D4A99 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F322A1786F40C004D4A99 /* Icon.png */; };
-		4C6F322D1786F413004D4A99 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F322C1786F413004D4A99 /* Icon@2x.png */; };
 		4C6F322F178853F8004D4A99 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6F322E178853F8004D4A99 /* MobileCoreServices.framework */; };
 		4C6F3231178857C4004D4A99 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6F3230178857C4004D4A99 /* MediaPlayer.framework */; };
 		4CA2DC2518DD666500AAE190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CA2DC2418DD666500AAE190 /* Images.xcassets */; };
@@ -102,10 +98,6 @@
 		4C6F320F1786F35A004D4A99 /* login_page_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_page_bg@2x.png"; sourceTree = "<group>"; };
 		4C6F32101786F35A004D4A99 /* splash_page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_page.png; sourceTree = "<group>"; };
 		4C6F32111786F35A004D4A99 /* splash_page@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_page@2x.png"; sourceTree = "<group>"; };
-		4C6F32261786F3DB004D4A99 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		4C6F32281786F3E5004D4A99 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		4C6F322A1786F40C004D4A99 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		4C6F322C1786F413004D4A99 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		4C6F322E178853F8004D4A99 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4C6F3230178857C4004D4A99 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		4CA2DC2418DD666500AAE190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -195,10 +187,6 @@
 		4CD66BDD177D23360097C4AE = {
 			isa = PBXGroup;
 			children = (
-				4C6F322C1786F413004D4A99 /* Icon@2x.png */,
-				4C6F322A1786F40C004D4A99 /* Icon.png */,
-				4C6F32281786F3E5004D4A99 /* Default@2x.png */,
-				4C6F32261786F3DB004D4A99 /* Default.png */,
 				4C6F31FD1786F35A004D4A99 /* images */,
 				4C20162A17817C8100CBF606 /* TestSample */,
 				4CD66BE8177D23360097C4AE /* Frameworks */,
@@ -309,10 +297,6 @@
 				4C6F32231786F35A004D4A99 /* login_page_bg@2x.png in Resources */,
 				4C6F32241786F35A004D4A99 /* splash_page.png in Resources */,
 				4C6F32251786F35A004D4A99 /* splash_page@2x.png in Resources */,
-				4C6F32271786F3DB004D4A99 /* Default.png in Resources */,
-				4C6F32291786F3E5004D4A99 /* Default@2x.png in Resources */,
-				4C6F322B1786F40C004D4A99 /* Icon.png in Resources */,
-				4C6F322D1786F413004D4A99 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +410,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSample/TestSample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TestSample/TestSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = TestSample;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
@@ -444,7 +428,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSample/TestSample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TestSample/TestSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = TestSample;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
