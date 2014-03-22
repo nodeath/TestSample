@@ -10,6 +10,6 @@
 
 @interface ThirdViewController : UIViewController<UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (retain, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)didPressPickPicture:(UIButton *)sender;
 @end

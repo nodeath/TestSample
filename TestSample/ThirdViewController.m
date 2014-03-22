@@ -48,7 +48,6 @@
                                   @"Take a photo",
                                   @"Record a video", nil];
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
-    [actionSheet release];
 
 }
 
@@ -63,11 +62,9 @@
             imagePickerController.allowsEditing = YES;
             imagePickerController.delegate = self;
             [self presentViewController:imagePickerController animated:YES completion:nil];
-            [imagePickerController release];
         }else{
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Image Picker is not supported under this environment" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alertView show];
-            [alertView release];
         }
     }else if(buttonIndex == 1){
         //When the user choose to pick a picture from the picture library, call the interface to show camera.
@@ -80,11 +77,9 @@
             imagePickerController.allowsEditing = YES;
             imagePickerController.delegate = self;
             [self presentViewController:imagePickerController animated:YES completion:nil];
-            [imagePickerController release];
         }else{
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Camera is not supported under this environment" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alertView show];
-            [alertView release];
         }
 
     }else{
@@ -99,11 +94,9 @@
             imagePickerController.allowsEditing = YES;
             imagePickerController.delegate = self;
             [self presentViewController:imagePickerController animated:YES completion:nil];
-            [imagePickerController release];
         }else{
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Video is not supported under this environment" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alertView show];
-            [alertView release];
         }
     }
 }
@@ -121,16 +114,11 @@
         MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:(NSURL *) info[UIImagePickerControllerMediaURL]];
         [picker dismissViewControllerAnimated:YES completion:^{
             [self presentMoviePlayerViewControllerAnimated:player];
-            [player release];
         }];
     }
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker dismissViewControllerAnimated:YES completion:nil];
-}
-- (void)dealloc {
-    [_imageView release];
-    [super dealloc];
 }
 @end

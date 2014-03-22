@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
-@property (retain, nonatomic) IBOutlet UITextField *usernameField;
-@property (retain, nonatomic) IBOutlet UITextField *passwordField;
+
+@property (strong, nonatomic) IBOutlet UITextField *usernameField;
+@property (strong, nonatomic) IBOutlet UITextField *passwordField;
 
 - (IBAction)didPressValid:(UIButton *)sender;
 - (IBAction)didEndOnExit:(UITextField *)sender;
 - (IBAction)displayGestureForTapRecognizer:(UITapGestureRecognizer *)sender;
+
 @end

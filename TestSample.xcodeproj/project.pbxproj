@@ -50,6 +50,7 @@
 		4C6F322D1786F413004D4A99 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6F322C1786F413004D4A99 /* Icon@2x.png */; };
 		4C6F322F178853F8004D4A99 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6F322E178853F8004D4A99 /* MobileCoreServices.framework */; };
 		4C6F3231178857C4004D4A99 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6F3230178857C4004D4A99 /* MediaPlayer.framework */; };
+		4CA2DC2518DD666500AAE190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CA2DC2418DD666500AAE190 /* Images.xcassets */; };
 		4CD66BEA177D23360097C4AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD66BE9177D23360097C4AE /* UIKit.framework */; };
 		4CD66BEC177D23360097C4AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD66BEB177D23360097C4AE /* Foundation.framework */; };
 		4CD66BEE177D23360097C4AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CD66BED177D23360097C4AE /* CoreGraphics.framework */; };
@@ -107,6 +108,7 @@
 		4C6F322C1786F413004D4A99 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		4C6F322E178853F8004D4A99 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4C6F3230178857C4004D4A99 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4CA2DC2418DD666500AAE190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4CD66BE6177D23360097C4AE /* TestSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD66BE9177D23360097C4AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4CD66BEB177D23360097C4AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -157,6 +159,7 @@
 				4C20164617817C8100CBF606 /* WebViewController.h */,
 				4C20164717817C8100CBF606 /* WebViewController.m */,
 				4C20164817817C8100CBF606 /* WebViewController.xib */,
+				4CA2DC2418DD666500AAE190 /* Images.xcassets */,
 			);
 			path = TestSample;
 			sourceTree = "<group>";
@@ -192,7 +195,6 @@
 		4CD66BDD177D23360097C4AE = {
 			isa = PBXGroup;
 			children = (
-				4C6F3230178857C4004D4A99 /* MediaPlayer.framework */,
 				4C6F322C1786F413004D4A99 /* Icon@2x.png */,
 				4C6F322A1786F40C004D4A99 /* Icon.png */,
 				4C6F32281786F3E5004D4A99 /* Default@2x.png */,
@@ -215,6 +217,7 @@
 		4CD66BE8177D23360097C4AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C6F3230178857C4004D4A99 /* MediaPlayer.framework */,
 				4C6F322E178853F8004D4A99 /* MobileCoreServices.framework */,
 				4CD66BE9177D23360097C4AE /* UIKit.framework */,
 				4CD66BEB177D23360097C4AE /* Foundation.framework */,
@@ -283,6 +286,7 @@
 				4C20165217817C8100CBF606 /* first@2x.png in Resources */,
 				4C20165617817C8100CBF606 /* second.png in Resources */,
 				4C20165717817C8100CBF606 /* second@2x.png in Resources */,
+				4CA2DC2518DD666500AAE190 /* Images.xcassets in Resources */,
 				4C20165B17817C8100CBF606 /* ThirdViewController.xib in Resources */,
 				4C20165D17817C8100CBF606 /* WebViewController.xib in Resources */,
 				4C6F32121786F35A004D4A99 /* bookmark.png in Resources */,
@@ -415,11 +419,14 @@
 		4CD66C18177D23360097C4AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSample/TestSample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TestSample/TestSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = TestSample;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
@@ -430,11 +437,14 @@
 		4CD66C19177D23360097C4AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSample/TestSample-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/TestSample/TestSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = TestSample;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;

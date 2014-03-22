@@ -33,17 +33,17 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.webView loadRequest:self.request];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc {
-    [_webView release];
-    [_activeIndicator release];
-    [super dealloc];
-}
 -(void)webViewDidStartLoad:(UIWebView *)webView{
     [self.activeIndicator startAnimating];
 }

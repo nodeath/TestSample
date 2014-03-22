@@ -16,33 +16,28 @@
 
 @implementation AppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [_tabBarController release];
-    [super dealloc];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Initialising...
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     //Add first view controller, which shows the username, password, and validation, into tabbar controller
-    UIViewController *viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil] autorelease];
+    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     
     //Add second view controller, which shows table view and webview to load websites, into tabbar controller
-    UIViewController *viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil] autorelease];
+    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
-    UINavigationController *navigationController2 = [[[UINavigationController alloc] initWithRootViewController:viewController2] autorelease];
+    UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
+    navigationController2.delegate = viewController2;
     
     
     //Add third view controller, which shows how to pick a image and take a picture from camera, into tabbar controller
     UIViewController *viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
     viewController3.navigationItem.title = @"imageView";
-    UINavigationController *navigationController3 = [[[UINavigationController alloc] initWithRootViewController:viewController3] autorelease];
+    UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:viewController3];
     
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
+    self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[viewController1, navigationController2, navigationController3];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];

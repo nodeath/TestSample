@@ -14,7 +14,7 @@
 
 @interface SecondViewController ()
 
-@property (nonatomic, retain) NSArray *urlArray;
+@property (nonatomic, strong) NSArray *urlArray;
 
 @end
 
@@ -36,18 +36,17 @@ static NSString *tableViewCellIdentifier = @"SecondViewCell";
 {
     [super viewDidLoad];
     //Create a sample list with 10 website url.
-    self.urlArray = [NSArray arrayWithObjects:
-                     @"http://www.google.com",
-                     @"http://australia.gov.au/‎‎",
-                     @"http://jobsearch.gov.au/‎",
-                     @"http://www.immi.gov.au/living-in-australia/‎",
+    self.urlArray = @[@"http://www.google.com",
+                     @"http://australia.gov.au/",
+                     @"http://jobsearch.gov.au/",
+                     @"http://www.immi.gov.au/living-in-australia/",
                      @"http://www.reuters.com/places/australia",
-                     @"http://auspost.com.au/‎",
-                     @"http://www.lonelyplanet.com/australia‎",
-                     @"http://www.ipaustralia.gov.au/‎",
+                     @"http://auspost.com.au/",
+                     @"http://www.lonelyplanet.com/australia",
+                     @"http://www.ipaustralia.gov.au/",
                      @"http://www.theaustralian.com.au/",
-                     @"http://www.ga.gov.au/"
-                     @"http://topics.bloomberg.com/australia/", nil];
+                     @"http://www.ga.gov.au/",
+                     @"http://topics.bloomberg.com/australia/"];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -79,19 +78,12 @@ static NSString *tableViewCellIdentifier = @"SecondViewCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     //Using webview to load the website
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[self.urlArray objectAtIndex:indexPath.row]]];
+    NSString *urlString =[self.urlArray objectAtIndex:indexPath.row];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     
     WebViewController *webViewController = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
-    
+    webViewController.request = request;
     [self.navigationController pushViewController:webViewController animated:YES];
-    [webViewController.webView loadRequest:request];
-    [webViewController release];
-    
 }
 
-- (void)dealloc {
-    [_tableView release];
-    [_urlArray release];
-    [super dealloc];
-}
 @end

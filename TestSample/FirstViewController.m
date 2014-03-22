@@ -32,6 +32,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -48,11 +52,9 @@
     if(self.passwordField.text.length < 3){
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Waring" message:@"Password is too short" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertview show];
-        [alertview release];
     }else{
         UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Validation passed" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertview show];
-        [alertview release];
     }
 }
 
@@ -61,9 +63,4 @@
     [self.passwordField resignFirstResponder];
 }
 
-- (void)dealloc {
-    [_passwordField release];
-    [_usernameField release];
-    [super dealloc];
-}
 @end

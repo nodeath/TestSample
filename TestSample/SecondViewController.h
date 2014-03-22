@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
 
-@property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
